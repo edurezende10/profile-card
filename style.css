@@ -4,85 +4,46 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-}
-
 main {
+    max-width: 100vw;
     background-color: hsl(185, 75%, 39%);
-    width: 100vw;
     height: 100vh;
-}
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-
-  .flip-card{
-    width: 350px;
-    height: 380px;
-    perspective: 1000px;
-    border: 1px solid #f1f1f1;
-
+    overflow: hidden;
+   
 
 }
 
-.flip-card-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    -webkit-transition: transform 0.8s;
-    -moz-transition: transform 0.8s;
-    -ms-transition: transform 0.8s;
-    -o-transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-  
-  
-  
-  
-  .flip-card:hover
-.flip-card-inner{
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-}
-  
 
-
-
-.flip-card-front,
-.flip-card-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-.flip-card-front{
-    background: white;
-    color: black;
-}
-.flip-card-back{
-    background: white;
-    color: black;
-    transform:rotateY(180deg);
-    -webkit-transform:rotateY(180deg);
-    -moz-transform:rotateY(180deg);
-    -ms-transform:rotateY(180deg);
-    -o-transform:rotateY(180deg);
-}
 
 
 
 .img-background-top {
     position: absolute;
-    right: 20%;
+    bottom: 50%;
+    right: 50%;
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+}
+.img-background-bottom {
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+    left: 50%;
+    z-index: 0;
+
+   
+
+
+    
+    
 }
 
 .card {
-   
+    width: 350px;
+    height: 380px;
     border-radius: 5%;
     margin: 0px auto;
     background: white;
@@ -94,87 +55,78 @@ main {
     overflow: hidden;
 
     position: relative;
+
     top: 150px;
+    z-index: 100;
 }
 
 .profile {
     text-align: center;
     position: relative;
     bottom: 60px;
-    //border: 5px solid red;
-
+z-index: 1;
 }
 
 .profile-information {
-    //border: 5px solid green;
     display: inline-block;
     margin: 0 auto;
 
 }
 
 .profile-information img {
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
 
-    border: 5px solid white;
+   border: 5px solid white;
 }
-
-.profile-information p {
+.profile-information p{
     padding: 10px 15px 15px 15px;
     color: hsl(227, 10%, 46%);
 
 }
-
-.font-card {
+.font-card{
     font-size: 18px;
-    padding-bottom: 5px;
+    padding-bottom:5px ;
 }
-
 .profile-name {
-    padding-top: 20px;
+    padding-top:20px;
     font-weight: 700;
     color: hsl(229, 23%, 23%);
 }
-
 .profile-name span,
-.stats p {
+.stats p
+ {
     color: hsl(227, 10%, 46%);
     font-weight: 400;
 }
-
-.stats p {
+.stats p{
     font-size: 12px;
     font-weight: 400;
 }
 
-.container-stats {
+.container-stats{
     padding-top: 25px;
     height: 50px;
     color: hsl(229, 23%, 23%);
+    z-index: 10;
 
 
 }
-
-.container-stats span {
+.container-stats span{
     display: inline-block;
     width: 100%;
     position: relative;
     bottom: 30px;
-    border-top: hsla(227, 10%, 46%, 0.164) 1px solid;
+    border-top:hsla(227, 10%, 46%, 0.164)  1px solid;
 
 }
-
-.stats {
+.stats{
     display: inline-block;
 }
-
-.stats {
+.stats  {
     width: 100px;
 
 }
-
- 
-  
